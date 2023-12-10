@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "make-your-hands-dirty-ui": {
+    "user-management": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,19 +17,20 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/make-your-hands-dirty-ui",
+            "outputPath": "dist/user-management",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -62,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "make-your-hands-dirty-ui:build:production"
+              "buildTarget": "user-management:build:production"
             },
             "development": {
-              "buildTarget": "make-your-hands-dirty-ui:build:development"
+              "buildTarget": "user-management:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "make-your-hands-dirty-ui:build"
+            "buildTarget": "user-management:build"
           }
         },
         "test": {
@@ -84,12 +89,13 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -98,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "2feb9b77-0deb-4f72-ad48-1f940a0196d6"
+    "analytics": "2ba97450-91fd-4d72-8d54-d35a8637a8f1"
   }
 }

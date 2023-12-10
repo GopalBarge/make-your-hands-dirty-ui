@@ -1,5 +1,5 @@
 {
-  "name": "make-your-hands-dirty-ui",
+  "name": "user-management",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:make-your-hands-dirty-ui": "node dist/make-your-hands-dirty-ui/server/server.mjs"
+    "serve:ssr:user-management": "node dist/user-management/server/server.mjs"
   },
   "private": true,
   "dependencies": {
