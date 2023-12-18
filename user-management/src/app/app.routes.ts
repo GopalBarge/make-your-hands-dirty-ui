@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import {LoginComponent} from "./components/login/login.component";
-import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
-import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {SignupComponent} from "./components/signup/signup.component";
+import {AdminComponent} from "./components/admin/admin.component";
 
 export const routes: Routes = [
-  {path: 'login',component: LoginComponent},
-  {path: 'forgot-password',component: ForgotPasswordComponent},
-  {path: '',redirectTo: '/login', pathMatch: "full"},
-  {path: '**',component: NotFoundComponent}];
+  {path:'login', component: LoginComponent},
+  {path:'signup', component: SignupComponent},
+  {path:'admin', component: AdminComponent},
+
+];
